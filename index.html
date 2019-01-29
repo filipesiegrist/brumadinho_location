@@ -168,6 +168,15 @@
     document.addEventListener("DOMContentLoaded", function() {
         window.map = initMap();
     });
+    
+
+  window.map.on('dblclick',function(e){
+    lat = e.latlng.lat;
+    lon = e.latlng.lng;
+    document.getElementById("lat").value = lat;
+    document.getElementById("lng").value = lon;
+    calculate();
+});
 
 
 
